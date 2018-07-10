@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Report on The Quartermaster project.</title>
+    <link>http://qmstr.org/tags/report/</link>
+    <description>Recent content in Report on The Quartermaster project.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://qmstr.org/tags/report/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quartermaster Milestone 1 Development Report: Voilà, a modular, extendable FOSS Compliance Toolchain</title>
+      <link>http://qmstr.org/blog/2018/04/25/qmstr-milestone-1-report/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/04/25/qmstr-milestone-1-report/</guid>
+      <description>&lt;p&gt;Version 0.1 is here. After a proof-of-concept, plenty of drafting,
+feedback and discussions, a prototype, and finally three months of
+development focused on creating a useful product, we are tagging a
+first version of Quartermaster. The theme of the first version was to
+implement the toolchain basics: the compliance knowledge graph, the
+master container, the elemental workflow with a construction, analysis
+and reporting phase, and the APIs for modules to interact with the
+knowledge graph in each of these phases. There are public showcases
+that demonstrate the functionality implemented so far. After gathering
+functional and legal requirements, the team will now move on to
+milestone 2, where we will focus on making use of the building blocks
+from the first version to implement badly needed functions of
+generating license compliance documentation - an SPDX manifest
+analyzer, integration with Fossology, and features to aggregate
+analysis results from different sources into reports.
+&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

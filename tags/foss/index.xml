@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Foss on The Quartermaster project.</title>
+    <link>http://qmstr.org/tags/foss/</link>
+    <description>Recent content in Foss on The Quartermaster project.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 25 Apr 2018 00:00:00 +0100</lastBuildDate>
+    
+	<atom:link href="http://qmstr.org/tags/foss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quartermaster Milestone 1 Development Report: Voilà, a modular, extendable FOSS Compliance Toolchain</title>
+      <link>http://qmstr.org/blog/2018/04/25/qmstr-milestone-1-report/</link>
+      <pubDate>Wed, 25 Apr 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/04/25/qmstr-milestone-1-report/</guid>
+      <description>&lt;p&gt;Version 0.1 is here. After a proof-of-concept, plenty of drafting,
+feedback and discussions, a prototype, and finally three months of
+development focused on creating a useful product, we are tagging a
+first version of Quartermaster. The theme of the first version was to
+implement the toolchain basics: the compliance knowledge graph, the
+master container, the elemental workflow with a construction, analysis
+and reporting phase, and the APIs for modules to interact with the
+knowledge graph in each of these phases. There are public showcases
+that demonstrate the functionality implemented so far. After gathering
+functional and legal requirements, the team will now move on to
+milestone 2, where we will focus on making use of the building blocks
+from the first version to implement badly needed functions of
+generating license compliance documentation - an SPDX manifest
+analyzer, integration with Fossology, and features to aggregate
+analysis results from different sources into reports.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster v0.1 development update #5: The reporting API and &#34;Easy Mode&#34;</title>
+      <link>http://qmstr.org/blog/2018/04/09/qmstr-newsletter-8/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/04/09/qmstr-newsletter-8/</guid>
+      <description>&lt;p&gt;Spring is coming, and so is Quartermaster v0.1! One more sprint to get
+there. Sprint 5 saw the implementation of initial support for Gradle
+based Java projects, a finished definition of the reporting API, the
+introduction of &amp;ldquo;easy mode&amp;rdquo; (see below), improved author detection and
+more steps towards an automated HTML reporter. Sprint 5 was the last
+round of new features before Quartermaster v0.1 will be wrapped up for
+release. We will use the final sprint in this quarter to tie up loose
+ends, polish, containerise, document and demonstrate, and to prepare
+the v0.1 release. The first milestone will be concluded with the v0.2
+requirements workshop on April 11.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster v0.1 development update #4: Major refactoring, requirements workshop April 11</title>
+      <link>http://qmstr.org/blog/2018/03/22/qmstr-newsletter-7/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/03/22/qmstr-newsletter-7/</guid>
+      <description>&lt;p&gt;After the basics of the Quartermaster toolchain are in place, we
+focused on a refactoring of the master APIs. The key goal is to make
+implementing modules for the three phases straightforward, composable
+and as simple as possible. All modules now run in separate processes
+that communicate with the master over the network. This decouples both
+the module and the master code, as well as the licensing models of the
+modules and the master. It is now possible to run multiple analysers
+configurable from the master. Analyzers may report multiple
+or overlapping findings of the same type, like copyright holders,
+without interfering with each other. Based on this, we can now
+implement modular reporters that generate HTML and SPDX, or
+notifications, or other kinds of feedback.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster v0.1 development update #3: It works - now make it easier</title>
+      <link>http://qmstr.org/blog/2018/03/13/qmstr-newsletter-6/</link>
+      <pubDate>Tue, 13 Mar 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/03/13/qmstr-newsletter-6/</guid>
+      <description>&lt;p&gt;In sprint #3 towards Quartermaster v0.1, we made it easer to package
+the master into a Docker container using
+a
+&lt;a href=&#34;https://docs.docker.com/develop/develop-images/multistage-build/&#34;&gt;multi-stage Docker file&lt;/a&gt;,
+merged the &lt;code&gt;qmstr-container&lt;/code&gt; repository into the &lt;code&gt;qmstr&lt;/code&gt; one, set up
+more CI to endure quality of the master HEAD and the incoming PRs,
+extended license detection with ScanCode and Ninka, and began
+implementing the reporting API endpoint. You can now see the build and
+test results both for incoming PRs as well as for the master mainline
+branch. Finally we prepared Quartermaster to be presented at
+the
+&lt;a href=&#34;https://events.linuxfoundation.org/events/open-source-leadership-summit-2018/&#34;&gt;Open Source Leadership Summit&lt;/a&gt;. We
+made good progress, even though the setup is still a bit rough at the
+edges. It works, but the APIs are not yet as modular as we want them
+to be. We will focus on that in the next sprint.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster v0.1 development update #2: Key building blocks are falling into place</title>
+      <link>http://qmstr.org/blog/2018/02/23/qmstr-newsletter-5/</link>
+      <pubDate>Fri, 23 Feb 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/02/23/qmstr-newsletter-5/</guid>
+      <description>&lt;p&gt;It feels great when a plan comes together. After the requirements
+workshop on January 17, the Quartermaster team had a pretty good
+understanding of what the architecture of the toolchain should look
+like. Two weeks into development, we now see that the design is solid,
+and that the runtime phases and modular analysis and reporting
+concepts work well. The details of the architecture will be explained
+in an upcoming blog post. Right now, we are making good progress
+towards a working system. The &lt;code&gt;curl&lt;/code&gt; demo was extended, we added the
+&lt;code&gt;qmstr-cli&lt;/code&gt; tool to manage the master, and set up the first internal
+CI.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster v0.1 development update #1</title>
+      <link>http://qmstr.org/blog/2018/02/13/qmstr-newsletter-4/</link>
+      <pubDate>Tue, 13 Feb 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/02/13/qmstr-newsletter-4/</guid>
+      <description>&lt;p&gt;We hope you are ready for some fireworks as we kick of the development
+of the first Quartermaster version that aims for general
+availability. The goal for this sprint, after we wrapped up prototype
+development in the previous one, was to establish all the building
+blocks that will make the Quartermaster toolchain. They are based on
+the new system architecture developed at the requirements workshop on
+January 17, and based (but developed from scratch) on the learnings
+from the prototype. At the end of the sprint, we had a working
+Quartermaster again, with some fancy graph visualisations.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster prototype development update #3</title>
+      <link>http://qmstr.org/blog/2018/01/29/qmstr-newsletter-3/</link>
+      <pubDate>Mon, 29 Jan 2018 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2018/01/29/qmstr-newsletter-3/</guid>
+      <description>&lt;p&gt;The third Quartermaster prototype development sprint also marked the
+end of development of the Quartermaster prototype. Our main goal for
+the prototype was to work with our partners and collaborators to
+develop an approach to FOSS compliance automation that delivers
+correct and complete results in a variety of use cases. The
+integration of new build systems has been tested, the workflow phases
+have been refined and abstracted further and limits of the prototype
+design identified. We wrapped up the sprint with a workshop where the
+functionality of the prototype was evaluated and the findings applied
+to a draft architecture of the first production release of
+Quartermaster.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster prototype development update #2</title>
+      <link>http://qmstr.org/blog/2017/12/20/qmstr-newsletter-2/</link>
+      <pubDate>Wed, 20 Dec 2017 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2017/12/20/qmstr-newsletter-2/</guid>
+      <description>In the second Quartermaster prototype development sprint, we focused on the connection between Continuous Integration and the build instrumentation performed by Quartermaster. Jenkins serves as the reference build system for the prototype. We wanted to lay the foundation for executing Quartermaster instrumented builds from a CI build queue, and creating a feedback loop to developers by feeding FOSS compliance analysis results back into the build results page.
+Sprint #2: Initial integration between CI and Quartermaster With the end of this sprint, we published an initial plugin to Jenkins that communicates with the Quartermaster master process running adjacent to the software build process.</description>
+    </item>
+    
+    <item>
+      <title>Quartermaster prototype development update #1</title>
+      <link>http://qmstr.org/blog/2017/12/11/qmstr-newsletter-1/</link>
+      <pubDate>Mon, 11 Dec 2017 00:00:00 +0100</pubDate>
+      
+      <guid>http://qmstr.org/blog/2017/12/11/qmstr-newsletter-1/</guid>
+      <description>Quartermaster is a community building project as much as it is a technical one. The idea to collaboratively build FOSS compliance tooling that is itself free and open source software has raised interest that has almost been overwhelming for us (in a good way). With these development updates, we want to inform our quickly growing community of contributors and partners about what has been achieved so far, and where development is headed next.</description>
+    </item>
+    
+  </channel>
+</rss>
